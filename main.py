@@ -2,6 +2,15 @@ from data import data
 import random
 from art import logo, vs
 
+# todo format the account data
+def format_data(account):
+    """formating the dictionary data into printable format."""
+    account_name = account["name"]
+    account_descrp= account["description"]
+    account_country= account["country"]
+    return(f"{account_name}, a {account_descrp} , from {account_country}")
+
+
 #todo display art
 print(logo)
 
@@ -13,13 +22,10 @@ second_account= random.choice(data)
 if first_account == second_account:
     second_account=random.choice(data)
 
-# todo format the account data
+print(f"Compare A : {format_data(first_account)}")
+print(vs)
+print(f"Compare B : {format_data(second_account)}")
 
-account_name =first_account["name"]
-account_descrp= first_account["description"]
-account_country= first_account["country"]
-
-print(f"{account_name}, a {account_descrp} , from {account_country}")
 
 
 
