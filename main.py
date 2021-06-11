@@ -1,16 +1,17 @@
-# This is a sample Python script.
+from data import data
+import random
+from art import logo, vs
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#todo display art
+print(logo)
+
+# todo generate random from the list of data
+
+first_account= random.choice(data)
+second_account= random.choice(data)
+print(first_account)
+print(second_account)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
