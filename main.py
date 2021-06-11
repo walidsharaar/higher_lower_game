@@ -17,9 +17,7 @@ def format_data(account):
 
 
 def check_answer(guess,first_account_follower,second_account_follower):
-
     """if statement usage to check the correct answer"""
-
     if first_account_follower > second_account_follower:
         return guess=="a"
     else:
@@ -33,8 +31,8 @@ def play_game():
     #todo display art
     print(logo)
     # todo generate random from the list of data
-    first_account= random.choice(data)
-    second_account= random.choice(data)
+    first_account= get_different_account()
+    second_account= get_different_account()
 #todo loop the game until getting wrong answer
     while game_continue:
         first_account = second_account
@@ -61,6 +59,7 @@ def play_game():
             score +=1
             print(f"You guess right! your score is {score}")
         else:
+            game_continue=False
             print(f"Sorry you are wrong. Your score is : {score}")
 
 
