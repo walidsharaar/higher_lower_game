@@ -27,6 +27,7 @@ def check_answer(guess,first_account_follower,second_account_follower):
 
 
 def play_game():
+    print(logo)
     score= 0
     game_continue = True
     #todo display art
@@ -39,26 +40,28 @@ def play_game():
         first_account = second_account
         second_account = get_different_account()
 #todo loop to generate different account
-    while first_account == second_account:
-    # ensure two accounts are different
-        second_account=random.choice(data)
+        while first_account == second_account:
+        # ensure two accounts are different
+            second_account=random.choice()
 
-    print(f"Compare A : {format_data(first_account)}")
-    print(vs)
-    print(f"Compare B : {format_data(second_account)}")
+        print(f"Compare A : {format_data(first_account)}")
+        print(vs)
+        print(f"Compare B : {format_data(second_account)}")
 
-    #todo ask user guess
+        #todo ask user guess
 
-    guess = input("Who has the more followers? A or B  ").lower()
-    first_account_follower = first_account["follower_count"]
-    second_account_follower = second_account["follower_count"]
+        guess = input("Who has the more followers? A or B  ").lower()
+        first_account_follower = first_account["follower_count"]
+        second_account_follower = second_account["follower_count"]
 
-    # todo check the user guess
-    is_right = check_answer(guess,first_account_follower,second_account_follower)
-    if is_right:
-        score +=1
-        print(f"You guess right! your score is {score}")
-    else:
-        print(f"Sorry you are wrong. Your score is : {score}")
+        # todo check the user guess
+        is_right = check_answer(guess,first_account_follower,second_account_follower)
+        print(logo)
+        if is_right:
+            score +=1
+            print(f"You guess right! your score is {score}")
+        else:
+            print(f"Sorry you are wrong. Your score is : {score}")
 
 
+play_game()
