@@ -26,6 +26,9 @@ print(f"Compare A : {format_data(first_account)}")
 print(vs)
 print(f"Compare B : {format_data(second_account)}")
 
+#todo ask user guess
+
+guess = input("Who has the more followers? A or B").lower()
 
 
 
